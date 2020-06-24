@@ -309,7 +309,7 @@ input {
   height: 60px;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 25px;
+  padding-top: 10px;
   position: relative;
   /* position: fixed;
   top: 0;
@@ -386,6 +386,30 @@ input {
 }
 .top-seek .xz-min a:hover {
   color: red;
+}
+.seek ul {
+  width: 500px;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background: #fff;
+  z-index: 3;
+  border: 1px solid #ccc;
+  display: none;
+}
+.seek ul li {
+  width: 500px;
+  line-height: 30px;
+}
+.seek ul li a {
+  display: block;
+  width: 100%;
+
+  color: #666;
+}
+.seek ul li a:hover {
+  background: #ccc;
+  color: #fff;
 }
 /* 选择大 */
 .top-seek .xz-max {
@@ -750,8 +774,8 @@ input {
 }
 .content_right .content_right_midd span {
   position: absolute;
-  top: 122px;
-  left: 50px;
+  top: 118px;
+  left: 51px;
 }
 .content_right .content_right_midd .cuxiao {
   text-decoration: none;
@@ -813,6 +837,7 @@ input {
   float: left;
 }
 .content_right .r_d ul li a {
+  font-size: 12px;
   text-decoration: none;
   line-height: 32px;
   padding-top: 8px;
@@ -838,7 +863,7 @@ input {
 .content_right .r_h .huafei li a {
   text-decoration: none;
   line-height: 16px;
-  padding: 2px;
+  padding: -3px;
   color: #666;
   font-size: 13px;
 }
@@ -847,6 +872,7 @@ input {
   color: white;
 }
 .content_right .in {
+  font-size: 12px;
   width: 180px;
   height: 22px;
   margin-bottom: 14px;

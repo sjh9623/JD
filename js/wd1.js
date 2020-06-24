@@ -82,4 +82,63 @@ $(function () {
       return false;
     }
   );
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 700) {
+      $(".seek-box").css({
+        width: "100%",
+        margin: "0 auto",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 50,
+        background: "white",
+        borderBottom: "2px solid red",
+      });
+
+      $(".zc-img").css({
+        backgroundPosition: " 0 -120px",
+        width: "125px",
+        height: "40px",
+        overflow: "hidden",
+      });
+    } else {
+      $(".seek-box").css({
+        position: "",
+        top: "",
+        zIndex: "",
+        background: "",
+        borderBottom: "none",
+      });
+    }
+  });
+  // 搜索
+
+  // $(".sous-tx").change(function () {
+  //   $("#oul").css({
+  //     display: "block",
+  //   });
+  //   let val = $(this).val();
+  //   console.log(val);
+  // $.ajax({
+  //   type: "get",
+  //   url: `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275&callback=jsonp&k=1&area=c2c&bucketid=18`,
+  //   datatype: "jsonp",
+  //   jsonpCallback: "jsonp",
+  //   success: function jsonp(data) {
+  //     console.log(data);
+  //   },
+  // });
+  //   $.getJSON(
+  //     `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275&callback=jsonp&k=1&area=c2c&bucketid=18`,
+  //     function jsonp(data) {
+  //       console.log(data);
+  //     }
+  //   );
+  // });
+  // 失去光标
+  // $(".sous-tx").blur(function () {
+  //   $("#oul").css({
+  //     display: "none",
+  //   });
+  // });
 });

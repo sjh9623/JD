@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+input {
+  background: none;
+  outline: none;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+.w {
+  width: 1210px;
+  margin: 0 auto;
+}
+.header {
+  height: 110px;
+  background: url(//misc.360buyimg.com/user/reg/3.0.0/css/i/headbg.jpg) repeat-x
+    left bottom;
+}
+
+.header .logo {
+  width: 160px;
+  height: 50px;
+  float: left;
+  margin-top: 24px;
+  background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/icon.png)
+    no-repeat;
+}
+.header .logo-title {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  font-size: 24px;
+  color: #333;
+  margin-top: 34px;
+}
+.header .have-account {
+  font-size: 16px;
+  float: right;
+  margin-top: 55px;
+  color: #999;
+}
+.header .have-account a {
+  color: #e22;
+}
+.container {
+  height: 406px;
+}
+.progress-bar {
+  position: relative;
+  margin: 80px auto 0;
+  width: 400px;
+  overflow: hidden;
+  height: 54px;
+  box-sizing: border-box;
+}
+.pro-step {
+  width: 73px;
+  height: 54px;
+  margin-right: 90px;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+}
+.step3 {
+  margin-right: 0;
+}
+.pro-step span {
+  display: block;
+  width: 24px;
+  line-height: 24px;
+  background: url(http://misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) -44px -199px
+    no-repeat;
+  margin: 5px 0 5px 17px;
+  color: #ccc;
+}
+.pro-step p.active {
+  color: green;
+}
+.pro-step span.active {
+  background: url(http://misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png)
+    1px -199px no-repeat;
+  color: #fff;
+}
+.pro-line {
+  position: absolute;
+  top: 10px;
+  left: 82px;
+  height: 10px;
+  width: 90px;
+  background: url(http://misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) -35px -99px
+    no-repeat;
+}
+.line2 {
+  left: 231px;
+}
+// input
+.box {
+  width: 400px;
+  height: 406px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+input {
+  display: block;
+  width: 400px;
+  height: 54px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+button {
+  width: 400px;
+  height: 54px;
+  background: red;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+.box p {
+  margin-top: 20px;
+}
+.box span {
+  display: inline-block;
+  color: #ccc;
+}
+.box .fl {
+  float: left;
+}
+.box .fr {
+  float: right;
+}
+.box span a {
+  color: #ccc;
+}
+.box span a:hover {
+  color: red;
+}
+// 底部
+#footer-2013 {
+  padding-bottom: 30px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+#footer-2013 a {
+  display: inline-block;
+  font-size: 12px;
+  color: #000;
+  margin: 5px;
+}
+#footer-2013 .links {
+  font-size: 12px;
+  color: #000;
+}
+#footer-2013 a:hover {
+  color: red;
+}

@@ -113,32 +113,33 @@ $(function () {
   });
   // 搜索
 
-  // $(".sous-tx").change(function () {
-  //   $("#oul").css({
-  //     display: "block",
-  //   });
-  //   let val = $(this).val();
-  //   console.log(val);
-  // $.ajax({
-  //   type: "get",
-  //   url: `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275&callback=jsonp&k=1&area=c2c&bucketid=18`,
-  //   datatype: "jsonp",
-  //   jsonpCallback: "jsonp",
-  //   success: function jsonp(data) {
-  //     console.log(data);
-  //   },
-  // });
-  //   $.getJSON(
-  //     `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275&callback=jsonp&k=1&area=c2c&bucketid=18`,
-  //     function jsonp(data) {
-  //       console.log(data);
-  //     }
-  //   );
-  // });
-  // 失去光标
-  // $(".sous-tx").blur(function () {
-  //   $("#oul").css({
-  //     display: "none",
-  //   });
-  // });
+  $(".sous-tx").on("input", function () {
+    $("#oul").css({
+      display: "block",
+    });
+    console.log(1);
+    let val = $(this).val();
+    console.log(val);
+    $.ajax({
+      type: "get",
+      url: `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275`,
+      dataType: "jsonp",
+      jsonpCallback: "jsonp",
+      success: function jsonp(data) {
+        console.log(data);
+      },
+    });
+    // $.getJSON(
+    //   `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275&callback=jsonp&k=1&area=c2c&bucketid=18`,
+    //   function jsonp(data) {
+    //     console.log(data);
+    //   }
+    // );
+  });
+  //失去光标
+  $(".sous-tx").blur(function () {
+    $("#oul").css({
+      display: "none",
+    });
+  });
 });

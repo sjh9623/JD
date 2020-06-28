@@ -1,3 +1,37 @@
+// 数据列表
+var uid = 34209;
+var id = location.search.slice(1).split("=")[1];
+
+$.get("http://jx.xuzhixiang.top/ap/api/detail.php", { id }).then((res) => {
+  console.log(res);
+  var str = "";
+
+  var data1 = res.data;
+  console.log(data1);
+  str += `
+    <div class="preview_wrap">
+        <div class="preview_img">
+          <img
+            src=${data1.pimg}
+            alt=""
+          />
+          <!-- 遮挡层 -->
+          <div class="mask"></div>
+          <!-- 放大版的图片 -->
+          <div class="big">
+            <img
+              src=${data1.pimg}
+              alt=""
+              class="bigImg"
+            />
+          </div>
+        </div>
+      </div>
+    `;
+  $("#h-js").html(`${data1.pdesc}`);
+
+  $(".preview_wrap").html(str);
+});
 window.addEventListener("load", function () {
   // 放大镜效果
   // 1.鼠标经过区域 遮挡层和大图片显示和隐藏
@@ -22,8 +56,8 @@ window.addEventListener("load", function () {
   // 给区域添加侦听器,只要鼠标一移动 就更新遮挡层的位置  切记:只有开启定位的盒子 才可以使用left和top值
   preview_img.addEventListener("mousemove", function (e) {
     // (1) 经过时 就要获得鼠标在preview_img里面的坐标
-    var mouseX = e.pageX - preview_img.offsetLeft;
-    var mouseY = e.pageY - preview_img.offsetTop;
+    var mouseX = e.pageX - preview_img.offsetLeft - 153;
+    var mouseY = e.pageY - preview_img.offsetTop - 141;
     // console.log(mouseX, mouseY);
     // (2) 更新遮挡层的位置
     // a.如果直接赋值的话:鼠标是在遮挡层的左上角,为了美观鼠标应该在遮挡层的中心位置 - 盒子高\宽的一半

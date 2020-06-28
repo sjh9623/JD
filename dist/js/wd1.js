@@ -117,29 +117,69 @@ $(function () {
     $("#oul").css({
       display: "block",
     });
-    console.log(1);
+
     let val = $(this).val();
     console.log(val);
     $.ajax({
       type: "get",
-      url: `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275`,
+      url: `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275&callback=?&k=1&area=c2c&bucketid=18`,
       dataType: "jsonp",
-      jsonpCallback: "jsonp",
-      success: function jsonp(data) {
+
+      success: function (data) {
         console.log(data);
+        let result = data.result;
+        let str = "";
+        result.forEach((item) => {
+          str += `
+          <li >
+          <a href="">${item[0]}</a>
+        </li>`;
+        });
+        $("#oul").html(str);
       },
     });
-    // $.getJSON(
-    //   `https://suggest.taobao.com/sug?code=utf-8&q=${val}&_ksTS=1591257683085_275&callback=jsonp&k=1&area=c2c&bucketid=18`,
-    //   function jsonp(data) {
-    //     console.log(data);
-    //   }
-    // );
   });
   //失去光标
   $(".sous-tx").blur(function () {
     $("#oul").css({
       display: "none",
     });
+  });
+  // 倒计时
+  var starttime = new Date("2020/11/20");
+  setInterval(function () {
+    var nowtime = new Date();
+    var time = starttime - nowtime;
+    var day = parseInt(time / 1000 / 60 / 60 / 24);
+    var hour = parseInt((time / 1000 / 60 / 60) % 24);
+    var minute = parseInt((time / 1000 / 60) % 60);
+    var seconds = parseInt((time / 1000) % 60);
+    $(".timmer__unit--hour").html(hour);
+    $(".timmer__unit--minute").html(minute);
+    $(".timmer__unit--second").html(seconds);
+
+    // $(".timespan").html(
+    //   day + "天" + hour + "小时" + minute + "分钟" + seconds + "秒"
+    // );
+  }, 1000);
+  let uid = sessionStorage.getItem("userMsg");
+  console.log(uid);
+  if (!uid) {
+    $.get(
+      "http://jx.xuzhixiang.top/ap/api/cart-list.php",
+      { id: uid },
+      function (data) {
+        console.log(data);
+      }
+    );
+  }
+  console.log(uid);
+  $(".gwc-a").click(function () {
+    console.log(1);
+    if (!uid) {
+      $(".gwc-a").attr("href", "http://localhost:5050/html/enter.html");
+    } else {
+      $(".gwc-a").attr("href", "http://localhost:5050/html/gwc.html");
+    }
   });
 });

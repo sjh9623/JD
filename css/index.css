@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
 }
+#logout {
+  display: none;
+}
+#userName {
+  display: none;
+}
 a {
   text-decoration: none;
 }
@@ -510,9 +516,13 @@ input {
   display: inline-block;
   font-size: 14px;
   color: #333;
+  line-height: 26px;
 }
 .jd-content .centre .nav-fl .one li a:hover {
   color: red;
+}
+.jd-content .centre .nav-fl .one li:hover .cont {
+  display: block;
 }
 /* 隐藏列表开始 */
 .jd-content .nav-fl .cont {
@@ -1424,7 +1434,10 @@ input {
   color: #fff;
   border: 1px solid 666;
   border-radius: 16px;
-  /* display: none; */
+  display: none;
+}
+.listbox .trade ul li:hover div {
+  display: block;
 }
 .listbox .trade ul li div a {
   display: inline-block;

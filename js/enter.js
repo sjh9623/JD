@@ -20,7 +20,12 @@ $(function () {
         },
         function (data) {
           if (data["code"] == 1) {
+            sessionStorage.setItem("userMsg", $("#username").val());
+            console.log(data);
             location.href = "../html/index.html";
+            var userObj = {};
+            userObj.id = data.data.id;
+            localStorage.setItem("userData", JSON.stringify(userObj));
           } else {
             alert("！请输入正确的账号或密码");
           }

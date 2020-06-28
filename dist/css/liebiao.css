@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
 }
+#logout {
+  display: none;
+}
+#userName {
+  display: none;
+}
 a {
   text-decoration: none;
 }

@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 #logout {
   display: none;
 }
 #userName {
   display: none;
-}
-a {
-  text-decoration: none;
 }
 ul,
 li {
@@ -179,8 +179,8 @@ input {
   border-top: none;
 }
 /* .head .navBar .fr .wd-jd div:nth-child(1) {
-    border-top: none;
-  } */
+        border-top: none;
+      } */
 .head .navBar .fr .wd-jd div a {
   float: left;
   margin: 5px 75px 0px 5px;
@@ -274,8 +274,8 @@ input {
   padding-top: 10px;
   position: relative;
   /* position: fixed;
-    top: 0;
-    left: 0; */
+        top: 0;
+        left: 0; */
 }
 .top-seek .seek-box .seek {
   width: 550px;
@@ -449,99 +449,195 @@ a {
     url(data:image/png;base64,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)
     50% no-repeat;
 }
-
-/* 搜索结束 */
-/* 商品列表 */
-.trade {
+/*标题开始*/
+.shoping {
   margin-top: 20px;
-  width: 1500px;
-  margin-left: 20px;
 }
-
-.trade ul {
-  width: 100%;
-
-  display: flex;
-  flex-wrap: wrap;
-}
-.trade ul li {
-  width: 19%;
-  height: 466px;
-  background: #fff;
-  margin-right: 14px;
-  margin-bottom: 14px;
-  box-sizing: border-box;
-  position: relative;
-}
-.trade ul li:hover {
-  border: 1px solid #ccc;
-}
-.trade ul li:nth-of-type(5n) {
-  margin-right: 0;
-}
-.trade ul li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.trade ul li a .max-img {
-  width: 220px;
-  height: 220px;
-  margin: 30px;
-  margin-bottom: 0;
-}
-.trade .min-img {
-  width: 100%;
+.warp {
+  margin-top: 50px;
   height: 50px;
-}
-.trade .min-img .min-ul {
-  width: 100%;
-  height: 100%;
-}
-.trade .min-img .min-li {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-.trade .min-img .min-ul img {
-  width: 20%;
-  height: 100%;
-  margin-right: 4px;
-}
-.trade h4 {
-  font-size: 12px;
-}
-.trade .jg {
-  display: inline-block;
-  color: red;
-  font-size: 20px;
-  line-height: 40px;
-}
-.trade .p1 {
-  height: 18px;
-  line-height: 18px;
-  font-size: 12px;
-}
-.p1 .span1 {
-  color: green;
-}
-.tj {
-  position: absolute;
-  bottom: 0;
-  left: 67px;
-  width: 150px;
-  height: 50px;
-  background: #ddd;
-  color: #000;
   line-height: 50px;
+  margin: 0 auto;
+  background: #ccc;
+}
+
+.title h3 {
+  float: left;
+  font-size: 23px;
+  color: #c91623;
+}
+
+.title div {
+  float: right;
+  font-size: 14px;
+  color: gray;
+}
+/*标题结束*/
+*显示菜单的开始*/ .tips {
+  width: 1000px;
+  height: 50px;
+  background-color: #f1f1f1;
+  margin-top: 165px;
+
+  border: 1px solid #e9e9e9;
+}
+
+.tips li {
+  float: left;
+
+  line-height: 50px;
+  font-size: 12px;
+  color: gray;
+}
+/*border-top：加上边框加*/
+.tips li:nth-child(1) {
+  width: 90px;
+  border-top: 3px solid #c91623;
+}
+
+.tips li:nth-child(2) {
+  margin-left: 80px;
+}
+
+.tips li:nth-child(3) {
+  margin-left: 430px;
+}
+
+.tips li:nth-child(4) {
+  margin-left: 70px;
+}
+
+.tips li:nth-child(5) {
+  margin-left: 110px;
+}
+
+.tips li:nth-child(6) {
+  margin-left: 50px;
+}
+/*显示菜单的结束*/
+
+/*商品详情展示开始*/
+.info {
+  width: 1000px;
+  height: 125px;
+  background-color: #fff4e8;
+
+  border: 1px solid gray;
+  margin-top: 30px;
+  /*上边框，对原来边框的约定进行覆盖*/
+  border-top: 3px solid gray;
+}
+
+.info li {
+  float: left;
+  margin-top: 20px;
+}
+
+.info a {
+  font-size: 12px;
+  color: #333333;
+  /* display: inline-block;
+  width: 50px;
+  height: 30px;
+  background: #ccc; */
+}
+.info .qxiao {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  color: #000;
+  line-height: 30px;
+  background: red;
+  font-size: 14px;
   text-align: center;
 }
-.tj:hover {
-  color: #fff;
-  background: red;
+
+.info_2 {
+  margin-left: 15px;
+  border: 1px solid gray;
 }
-/*  */
+
+.info_3 {
+  width: 270px;
+  height: 20px;
+}
+
+.info_4 {
+  margin-left: 45px;
+}
+
+.info_5 {
+  margin-left: 70px;
+}
+
+.info_6 {
+  margin-left: 40px;
+}
+
+.info_6 input {
+  width: 30px;
+  height: 12px;
+  text-align: center;
+
+  position: relative;
+  top: -2px;
+  left: -5px;
+}
+
+.info_6 button {
+  width: 30px;
+  height: 18px;
+}
+
+.bot {
+  position: relative;
+  left: -10px;
+}
+
+.info_7 {
+  margin-left: 40px;
+}
+/*商品详情展示结束*/
+
+/*结算窗口开始*/
+.balance {
+  width: 1000px;
+  height: 50px;
+
+  border: 1px solid gray;
+  margin-top: 30px;
+}
+
+.balance_ul1 li,
+.balance_ul2 li {
+  float: left;
+  line-height: 50px;
+  margin-left: 14px;
+  text-align: center;
+}
+
+.balance_ul2 {
+  float: right;
+}
+
+.butt {
+  width: 110px;
+  height: 50px;
+  background-color: #c91623;
+
+  border: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.balance_ul2 span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c91623;
+}
+/*结算窗口结束*/
+/* 底部开始 */
 .footer-service {
   /*1、多快好省模块*/
   border-bottom: 1px solid #dedede; /*设置底部样式*/
@@ -628,7 +724,7 @@ a {
 .cover dt {
   text-align: center;
 }
-.help .info {
+.help .info-v {
   width: 175px;
   height: 50px;
   font-size: 12px;

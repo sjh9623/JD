@@ -74,8 +74,14 @@
             <!-- 右侧开始 -->
             <ul class="fr">
               <li class="m">
-                <a href="http://localhost:5050/html/enter.html">你好，请登录</a>
-                <a href="http://localhost:5050/html/login.html">免费注册</a>
+                <a href="http://localhost:5050/html/enter.html" id="denglu"
+                  >你好，请登录</a
+                >
+                <a href="http://localhost:5050/html/login.html" id="zuce"
+                  >免费注册</a
+                >
+                <a href="" id="userName">XXX</a>
+                <a href="" id="logout">退出</a>
               </li>
               <li class="border"></li>
               <li class="m">
@@ -298,7 +304,7 @@
     </div>
     <!-- 商品列表 -->
     <div class="trade">
-      <ul>
+      <ul id="ul-lb">
         <li id="sp-li">
           <a href="">
             <img
@@ -552,5 +558,8 @@
         </div>
       </div>
     </div>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/liebiao.js"></script>
+    <script src="../js/denglu.js"></script>
   </body>
 </html>

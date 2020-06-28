@@ -22,6 +22,10 @@ $(function () {
           if (data["code"] == 1) {
             sessionStorage.setItem("userMsg", $("#username").val());
             console.log(data);
+            var obj = { uid: "34209" };
+            obj = JSON.stringify(obj); // 转成JSON格式的字符串。
+            localStorage.setItem("temp", obj);
+
             location.href = "../html/index.html";
             var userObj = {};
             userObj.id = data.data.id;

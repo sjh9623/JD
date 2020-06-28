@@ -157,23 +157,9 @@ $(function () {
     $(".timmer__unit--hour").html(hour);
     $(".timmer__unit--minute").html(minute);
     $(".timmer__unit--second").html(seconds);
-
-    // $(".timespan").html(
-    //   day + "天" + hour + "小时" + minute + "分钟" + seconds + "秒"
-    // );
   }, 1000);
   let uid = sessionStorage.getItem("userMsg");
-  console.log(uid);
-  if (!uid) {
-    $.get(
-      "http://jx.xuzhixiang.top/ap/api/cart-list.php",
-      { id: uid },
-      function (data) {
-        console.log(data);
-      }
-    );
-  }
-  console.log(uid);
+
   $(".gwc-a").click(function () {
     console.log(1);
     if (!uid) {
